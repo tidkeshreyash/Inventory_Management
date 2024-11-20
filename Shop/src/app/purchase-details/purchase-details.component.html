@@ -1,0 +1,34 @@
+<div *ngIf="purchaseData && purchaseData.length > 0">
+    <h3>Purchase Data</h3>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Purchase Id</th>
+          <th>Brand Name</th>
+          <th>Brand Id</th>
+          <th>Size</th>
+          <th>Unit</th>
+          <th>Cases</th>
+          <th>Total Bottles</th>
+          <th>MRP</th>
+          <th>Total Amount</th>
+          <th>Purchase Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of purchaseData">
+          <td>{{ item.purchaseId }}</td>
+          <td>{{ item.brandName }}</td>
+          <td>{{ item.brandId }}</td>
+          <td>{{ item.size }}</td>
+          <td>{{ item.unit }}</td>
+          <td>{{ item.cases }}</td>
+          <td>{{ item.bottles }}</td>
+          <td>&#8377;{{ item.mrp }}</td>
+          <td>&#8377;{{ item.totalAmount }}</td>
+          <td>{{ item.purchaseDate }}</td>
+          
+        </tr>
+      </tbody>
+    </table>
+  </div>

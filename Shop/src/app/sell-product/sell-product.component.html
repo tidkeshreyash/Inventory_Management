@@ -1,0 +1,89 @@
+<div class="sell-product">
+    <h2>Sell Product</h2>
+    <form (ngSubmit)="onSubmit()" #sellForm="ngForm">
+        <!-- Brand ID (Barcode) -->
+        <div class="form-group">
+            <label for="barcode" class="title">Enter Brand ID (Barcode)</label>
+            <input
+                type="number"
+                id="barcode"
+                name="barcode"
+                [(ngModel)]="barcode"
+                class="form-control"
+                placeholder="Enter brand ID"
+                required
+                (ngModelChange)="onBrandIdChange()"
+            />
+        </div>
+
+        <!-- Display Inventory Data -->
+        <div *ngIf="inventoryData" class="inventory-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Brand Name</th>
+                        <th>Size</th>
+                        <th>Unit</th>
+                        <th>MRP</th>
+                        <th>Stock</th>
+                        <th>Quantity to Sell</th>
+                        <th>Tax</th>
+                        <th>Total Amount</th>
+                        <th>Mode Of Payment</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{ inventoryData.brandName }}</td>
+                        <td>{{ inventoryData.size }}</td>
+                        <td>{{ inventoryData.unit }}</td>
+                        <td>&#8377;{{ inventoryData.mrp }}</td>
+                        <td>{{ inventoryData.bottles }}</td>
+                        <td>
+                            <input
+                                type="number"
+                                [(ngModel)]="sellQuantity"
+                                name="sellQuantity"
+                                class="form-control"
+                                placeholder="Enter quantity"
+                                required
+                                min="1"
+                                max="{{ inventoryData.bottles }}"
+                            />
+                        </td>
+                        <td>
+                            <input
+                                type="number"
+                                [(ngModel)]="tax"
+                                name="tax"
+                                class="form-control"
+                                placeholder="Enter tax"
+                                (ngModelChange)="calculateTotalAmount()"
+                            />
+                        </td>
+                        <td>{{ totalAmount | currency:'INR' }}</td>
+                        <td>
+                            <input
+                                type="String"
+                                [(ngModel)]="modeOfPayment"
+                                name="modeOfPayment"
+                                class="form-control"
+                                placeholder="Enter Mode Of Payment"
+                                required
+                                min="1"
+                                max="{{ modeOfPayment }}"
+                            />
+                        </td>
+                        <td>{{ sellDate}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="submit-button" [disabled]="!sellForm.form.valid || !inventoryData">
+            Submit Sale
+        </button>
+    </form>
+</div>

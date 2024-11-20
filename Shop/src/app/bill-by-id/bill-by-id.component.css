@@ -1,0 +1,131 @@
+/* Container Styling */
+.container {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 800px; /* Limit the width */
+    margin-left: auto;
+    margin-right: auto; /* Center the container */
+  }
+  
+  /* Heading Styling */
+  h3 {
+    text-align: center;
+    color: #333;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  /* Form Group Styling */
+  .form-group {
+    margin-bottom: 15px; /* Reduced margin for smaller form */
+  }
+  
+  /* Label Styling */
+  label {
+    font-size: 14px; /* Smaller font size */
+    color: #555;
+    font-weight: 600;
+    margin-bottom: 8px;
+    display: block;
+  }
+  
+  /* Input Field Styling */
+  input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+  }
+  
+  input[type="date"]:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 10px rgba(39, 174, 96, 0.2);
+    outline: none;
+  }
+  
+  /* Submit Button Styling */
+  button {
+    width: 100%;
+    padding: 8px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #007BFF;
+  }
+  
+  /* Bill Table Styling */
+  .table {
+    margin-top: 30px;
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Table Header Styling */
+  .table th {
+    background-color: #007BFF;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+  }
+  
+  /* Table Body Styling */
+  .table td {
+    padding: 12px;
+    text-align: center;
+    font-size: 14px;
+    border: 1px solid #ddd;
+  }
+  
+  /* Zebra Striping for Table Rows */
+  .table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .container {
+      padding: 15px;
+      max-width: 90%; /* Allow more space on smaller screens */
+    }
+  
+    .form-group {
+      margin-bottom: 15px;
+    }
+  
+    input[type="date"], button {
+      font-size: 14px;
+    }
+  
+    .table th, .table td {
+      font-size: 12px;
+    }
+  
+    h3 {
+      font-size: 20px;
+    }
+  }
+  

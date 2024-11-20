@@ -1,0 +1,85 @@
+/* Container for the purchase data */
+div {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+  }
+  
+  /* Header styles */
+  h3 {
+    color: #333;
+    text-align: center;
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  
+  /* Table styles */
+  table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+  }
+  
+  /* Table header styles */
+  table th {
+    background-color: #007BFF;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 16px;
+    text-align: left;
+    font-size: 17px;
+    
+  }
+  
+  /* Table row styles */
+  table tr:nth-child(even) {
+    background-color: #f7f7f7;
+  }
+  
+  table tr:nth-child(odd) {
+    background-color: #ffffff;
+  }
+  
+  table tr:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+  }
+  
+  /* Table cell styles */
+  table th, table td {
+    padding: 14px;
+    font-size: 16px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Last row cell styles */
+  table td:last-child {
+    border-bottom: none;
+  }
+  
+  /* Responsive table design */
+  @media (max-width: 768px) {
+    table {
+      font-size: 14px;
+    }
+  
+    table th, table td {
+      padding: 12px;
+    }
+  
+    h3 {
+      font-size: 22px;
+    }
+  }
+  

@@ -1,0 +1,147 @@
+<div class="purchase-product">
+    <h2>Purchase Product</h2>
+    <form (ngSubmit)="onSubmit()" #purchaseForm="ngForm">
+      <!-- Brand Name -->
+      <div class="form-group">
+        <label for="brandName">Brand Name</label>
+        <input
+          type="text"
+          id="brandName"
+          name="brandName"
+          [(ngModel)]="purchase.brandName"
+          class="form-control"
+          placeholder="Enter brand name"
+          required
+        />
+      </div>
+  
+      <!-- Brand ID -->
+      <div class="form-group">
+        <label for="brandId">Brand ID</label>
+        <input
+          type="number"
+          id="brandId"
+          name="brandId"
+          [(ngModel)]="purchase.brandId"
+          class="form-control"
+          placeholder="Enter brand ID"
+          required
+        />
+      </div>
+  
+      <!-- Size -->
+      <div class="form-group">
+        <label for="size">Size (in ml)</label>
+        <input
+          type="number"
+          id="size"
+          name="size"
+          [(ngModel)]="purchase.size"
+          class="form-control"
+          placeholder="Enter size"
+          required
+        />
+      </div>
+  
+      <!-- Unit -->
+      <div class="form-group">
+        <label for="unit">Unit</label>
+        <input
+          type="text"
+          id="unit"
+          name="unit"
+          [(ngModel)]="purchase.unit"
+          class="form-control"
+          placeholder="Enter unit"
+          required
+        />
+      </div>
+  
+      <!-- Cases -->
+      <div class="form-group">
+        <label for="cases">Cases</label>
+        <input
+          type="number"
+          id="cases"
+          name="cases"
+          [(ngModel)]="purchase.cases"
+          class="form-control"
+          placeholder="Enter cases"
+          required
+        />
+      </div>
+  
+      <!-- Bottles -->
+      <div class="form-group">
+        <label for="bottles">Bottles</label>
+        <input
+          type="number"
+          id="bottles"
+          name="bottles"
+          [(ngModel)]="purchase.bottles"
+          class="form-control"
+          placeholder="Enter bottles"
+          required
+        />
+      </div>
+  
+      <!-- MRP -->
+      <div class="form-group">
+        <label for="mrp">MRP (Price)</label>
+        <input
+          type="number"
+          id="mrp"
+          name="mrp"
+          [(ngModel)]="purchase.mrp"
+          class="form-control"
+          placeholder="Enter MRP"
+          (ngModelChange)="calculateTotalAmount()"
+          required
+        />
+      </div>
+  
+      <!-- Total Amount -->
+      <div class="form-group">
+        <label for="totalAmount">Total Amount</label>
+        <input
+          type="number"
+          id="totalAmount"
+          name="totalAmount"
+          [(ngModel)]="purchase.totalAmount"
+          class="form-control"
+          [value]="totalAmt"
+          readonly
+        />
+        
+      <!-- <input
+      type="number"
+      id="totalAmount"
+      name="totalAmount"
+      [(ngModel)]="purchase.totalAmount"
+      class="form-control"
+      [value]="totalAmt"
+      readonly
+  /> -->
+      <!-- Purchase Date -->
+      <div class="form-group">
+        <label for="purchaseDate">Purchase Date</label>
+        <input
+          type="date"
+          id="purchaseDate"
+          name="purchaseDate"
+          [(ngModel)]="purchase.purchaseDate"
+          class="form-control"
+          required
+        />
+      </div>
+  
+      <!-- Submit Button -->
+      <button type="submit" class="submit-button">Submit</button>
+   
+
+    <div *ngIf="message" class="message" [ngClass]="{'success': isSuccess, 'error': !isSuccess}">
+        {{ message }}
+      </div>
+  </div>
+  
+  

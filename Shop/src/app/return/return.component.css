@@ -1,0 +1,128 @@
+.return-product {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 25px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Softer shadow for a modern look */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.return-product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); /* Subtle hover effect */
+}
+
+h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 26px;
+    font-weight: 700;
+    border-bottom: 3px solid #27ae60;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 15px;
+    color: #34495e;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 16px;
+    background: #fdfdfd;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.form-control:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 10px rgba(39, 174, 96, 0.2); /* Enhanced focus glow */
+    background: #ffffff;
+    outline: none;
+}
+
+.form-control::placeholder {
+    color: #bdc3c7; /* Subtle placeholder color */
+}
+
+.submit-button {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    background-color: #007BFF;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.submit-button:hover {
+    background-color: #007BFF;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Enhanced hover effect */
+}
+
+.submit-button:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.message {
+    margin-top: 20px;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    text-align: center;
+    line-height: 1.4;
+}
+
+.success {
+    background-color: #28a745;
+    color: #ffffff;
+}
+
+.error {
+    background-color: #dc3545;
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .return-product {
+        padding: 20px;
+        margin: 15px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    .form-control {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .submit-button {
+        font-size: 16px;
+        padding: 12px;
+    }
+}

@@ -1,0 +1,144 @@
+.sell-product {
+    max-width: 1250px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.sell-product h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: 600;
+    
+}
+.title{
+    display: block;
+    text-align: center; 
+    font-size: 16px; 
+    font-weight: 500; 
+    margin-bottom: 10px; 
+
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 16px;
+    color: #333;
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+.inventory-table {
+    margin-top: 20px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.inventory-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.inventory-table th, .inventory-table td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.inventory-table th {
+    background-color: #007BFF;
+    color: white;
+    font-size: 18px;
+}
+
+.inventory-table td {
+    font-size: 16px;
+}
+
+.inventory-table input {
+    width: 80%;
+    padding: 6px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.inventory-table input:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    color: white;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #02356d;
+}
+
+.submit-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+    .sell-product {
+        padding: 15px;
+    }
+
+    .sell-product h2 {
+        font-size: 20px;
+    }
+
+    .form-group input,
+    .inventory-table input,
+    .submit-button {
+        font-size: 14px;
+    }
+
+    .inventory-table th,
+    .inventory-table td {
+        font-size: 14px;
+    }
+}
+
+.form-group #barcode {
+    width: 30%; /* Adjust the width percentage as needed */
+    margin: 0px auto;
+    display: block;
+}
+
+/* Reduce width for submit button */
+.submit-button {
+    width: 20%; /* Adjust the width percentage as needed */
+    margin: 20px auto;
+    display: block;
+}

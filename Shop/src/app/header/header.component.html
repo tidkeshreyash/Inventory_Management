@@ -1,0 +1,39 @@
+<nav class="navbar">
+    <div>
+      <img class="logo" routerLink="/" src="../../assets/download.png" alt="Logo">
+    </div>
+    
+  
+    <div class="main-nav">
+      <!-- Purchase Dropdown -->
+      <div class="dropdown">
+        <button class="dropbtn">Purchase&nbsp;
+          <i class="fa fa-angle-down"></i>
+        </button>
+        <div class="dropdown-content first">
+          <a routerLink="/purchase-product">Purchase Product</a>
+          <a routerLink="/purchase-details">Purchase Details</a>
+        </div>
+      </div> 
+  
+      <!-- Other Navigation Links -->
+      <a routerLink="/sell">Sell Details</a>
+      <div class="dropdown">
+        <button class="dropbtn">Return&nbsp;
+          <i class="fa fa-angle-down"></i>
+        </button>
+        <div class="dropdown-content first">
+          <a routerLink="/return-product">Return Product</a>
+          <a routerLink="/return-details">Return Details</a>
+        </div>
+      </div> 
+      <a routerLink="/inventory">Inventory</a>
+      <a routerLink="/bill">Bill</a>
+    </div>
+  
+    <!-- Contact Button -->
+    <div class="contact-btn">
+      <button routerLink="/sell-product">Sell Product</button>
+    </div>
+  </nav>
+  

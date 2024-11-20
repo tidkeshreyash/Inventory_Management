@@ -1,0 +1,33 @@
+<div *ngIf="returnData && returnData.length > 0">
+    <h3>Return Data</h3>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Return Id</th>
+          <th>Brand Id</th>
+          <th>Brand Name</th>
+          <th>Return Date</th> <!-- Added Return Date -->
+          <th>Return From</th> <!-- Added Return From -->
+          <th>Quantity in Bottles</th>
+          <th>Size</th>
+          <th>Unit</th>
+          <th>MRP</th>
+          <th>Total Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of returnData">
+          <td>{{ item.returnId }}</td>
+          <td>{{ item.brandId }}</td>
+          <td>{{ item.brandName }}</td>
+          <td>{{ item.returnDate | date: 'shortDate' }}</td> 
+          <td>{{ item.returnFrom }}</td> 
+          <td>{{ item.quantityInBottles }}</td>
+          <td>{{ item.size }}</td>
+          <td>{{ item.unit }}</td>
+          <td>&#8377;{{ item.mrp}}</td>
+          <td>&#8377;{{ item.totalAmount}}</td>
+        </tr>
+      </tbody>
+    </table>
+</div>

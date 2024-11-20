@@ -1,0 +1,27 @@
+<div *ngIf="sellData && sellData.length > 0">
+    <h3>Sell Data</h3>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Sell Date</th>
+          <th>Brand Id</th> 
+          <th>Quantity in Bottles</th> 
+          <th>Size</th> 
+          <th>MRP</th> 
+          <th>Tax</th> 
+          <th>Total Amount</th> 
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of sellData">
+          <td>{{ item.sellDate | date: 'shortDate' }}</td> 
+          <td>{{ item.brandId }}</td>
+          <td>{{ item.quantityInBottles }}</td>
+          <td>{{ item.size }}</td> 
+          <td>&#8377;{{ item.mrp}}</td>
+          <td>&#8377;{{ item.tax}}</td>
+          <td>&#8377;{{ item.totalAmount}}</td>
+        </tr>
+      </tbody>
+    </table>
+</div>

@@ -1,0 +1,47 @@
+<div class="container">
+    <h3>Search Bills by Date</h3>
+  
+    <!-- Bill Search Form -->
+    <form (ngSubmit)="onSubmit()" #billForm="ngForm">
+      <div class="form-group">
+        <label for="billDate">Enter Bill Date (MM-DD-YYYY)</label>
+        <input type="date" id="billDate" class="form-control" [(ngModel)]="date" name="billDate" required placeholder="YYYY-MM-DD">
+      </div>
+  
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  
+    <!-- Display Bills -->
+    <div *ngIf="billData && billData.length > 0">
+      <h3>Bills for Date: {{ date }}</h3>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Bill Date</th>
+            <th>Brand Name</th>
+            <th>Brand ID</th>
+            <th>Size</th>
+            <th>Unit</th>
+            <th>Quantity in Bottles</th>
+            <th>MRP</th>
+            <th>Tax</th>
+            <th>Total Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let bill of billData">
+            <td>{{ bill.billDate }}</td>
+            <td>{{ bill.brandName }}</td>
+            <td>{{ bill.brandId }}</td>
+            <td>{{ bill.size }}</td>
+            <td>{{ bill.unit }}</td>
+            <td>{{ bill.quantityInBottles }}</td>
+            <td>&#8377;{{ bill.mrp}}</td>
+            <td>&#8377;{{ bill.tax}}</td>
+            <td>&#8377;{{ bill.totalAmount}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  

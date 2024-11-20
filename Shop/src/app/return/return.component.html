@@ -1,0 +1,141 @@
+<div class="return-product">
+    <h2>Return Product</h2>
+    <form (ngSubmit)="onSubmit()" #returnForm="ngForm">
+      <!-- Brand Name -->
+      <div class="form-group">
+        <label for="brandName">Brand Name</label>
+        <input
+          type="text"
+          id="brandName"
+          name="brandName"
+          [(ngModel)]="returnData.brandName"
+          class="form-control"
+          placeholder="Enter brand name"
+          required
+        />
+      </div>
+  
+      <!-- Brand ID -->
+      <div class="form-group">
+        <label for="brandId">Brand ID</label>
+        <input
+          type="number"
+          id="brandId"
+          name="brandId"
+          [(ngModel)]="returnData.brandId"
+          class="form-control"
+          placeholder="Enter brand ID"
+          required
+        />
+      </div>
+  
+      <!-- Size -->
+      <div class="form-group">
+        <label for="size">Size (in ml)</label>
+        <input
+          type="number"
+          id="size"
+          name="size"
+          [(ngModel)]="returnData.size"
+          class="form-control"
+          placeholder="Enter size"
+          required
+        />
+      </div>
+  
+      <!-- Unit -->
+      <div class="form-group">
+        <label for="unit">Unit</label>
+        <input
+          type="text"
+          id="unit"
+          name="unit"
+          [(ngModel)]="returnData.unit"
+          class="form-control"
+          placeholder="Enter unit"
+          required
+        />
+      </div>
+  
+      <!-- Quantity in Bottles -->
+      <div class="form-group">
+        <label for="quantityInBottles">Quantity in Bottles</label>
+        <input
+          type="number"
+          id="quantityInBottles"
+          name="quantityInBottles"
+          [(ngModel)]="returnData.quantityInBottles"
+          class="form-control"
+          placeholder="Enter quantity in bottles"
+          required
+        />
+      </div>
+  
+      <!-- MRP -->
+      <div class="form-group">
+        <label for="mrp">MRP (Price)</label>
+        <input
+          type="number"
+          id="mrp"
+          name="mrp"
+          [(ngModel)]="returnData.mrp"
+          class="form-control"
+          placeholder="Enter MRP"
+          (ngModelChange)="calculateTotalAmount()"
+          required
+        />
+      </div>
+  
+      <!-- Total Amount -->
+      <div class="form-group">
+        <label for="totalAmount">Total Amount</label>
+        <!-- <div class="form-control" id="totalAmount" name="totalAmount" [(ngModel)]="returnData.totalAmount">
+          {{ totalAmt }}
+        </div> -->
+        <input
+        type="number"
+        id="totalAmount"
+        name="totalAmount"
+        [(ngModel)]="returnData.totalAmount"
+        class="form-control"
+        [value]="totalAmt"
+        readonly
+      />
+      </div>
+  
+      <!-- Return From -->
+      <div class="form-group">
+        <label for="returnFrom">Return From</label>
+        <input
+          type="text"
+          id="returnFrom"
+          name="returnFrom"
+          [(ngModel)]="returnData.returnFrom"
+          class="form-control"
+          placeholder="Enter return from"
+          required
+        />
+      </div>
+  
+      <!-- Return Date -->
+      <div class="form-group">
+        <label for="returnDate">Return Date</label>
+        <input
+          type="date"
+          id="returnDate"
+          name="returnDate"
+          [(ngModel)]="returnData.returnDate"
+          class="form-control"
+          required
+        />
+      </div>
+  
+      <!-- Submit Button -->
+      <button type="submit" class="submit-button">Submit</button>
+    </form>
+  
+    <div *ngIf="message" class="message" [ngClass]="{ 'success': isSuccess, 'error': !isSuccess }">
+      {{ message }}
+    </div>
+  </div>
+  

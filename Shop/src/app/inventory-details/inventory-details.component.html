@@ -1,0 +1,27 @@
+<div *ngIf="inventoryData && inventoryData.length > 0">
+    <h3>Inventory Data</h3>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Brand Id</th> 
+          <th>Brand Name</th> 
+          <th>Size</th>
+          <th>Unit</th> 
+          <th>Cases</th> 
+          <th>Bottles</th> 
+          <th>MRP</th>  
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of inventoryData">
+          <td>{{ item.brandId }}</td> 
+          <td>{{ item.brandName }}</td> 
+          <td>{{ item.size }}</td> 
+          <td>{{ item.unit }}</td> 
+          <td>{{ item.cases }}</td> 
+          <td>{{ item.bottles }}</td> 
+          <td>&#8377;{{ item.mrp}}</td> 
+        </tr>
+      </tbody>
+    </table>
+</div>
